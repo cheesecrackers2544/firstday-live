@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['logged_in'] = true; // Set a session variable to indicate the user is logged in
             $_SESSION['owner_id'] = $user['OwnerID']; // Store the OwnerID in the session
             $_SESSION['username'] = $username; // Store the username in the session
-            header("Location: user-listings.php"); // Redirect to the user listings page
+            header("Location: owner-listings.php"); // Redirect to the owners listings page
             exit;
         } else {
             echo "Invalid username or password";
@@ -45,3 +45,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
+
