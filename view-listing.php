@@ -45,7 +45,12 @@ if (isset($_GET['id'])) {
         echo "<p>Longitude: " . (empty($row['Longitude']) ? 'Not Available' : htmlspecialchars($row['Longitude'])) . "</p>";
         echo "<p>Max Licensed Positions: " . (empty($row['MaxLicensed']) ? 'Not Available' : htmlspecialchars($row['MaxLicensed'])) . "</p>";
         echo "<p>Capacity Under 2s: " . (empty($row['CapacityUnder2']) ? 'Not Available' : htmlspecialchars($row['CapacityUnder2'])) . "</p>";
-        // ... add other fields as needed ...
+
+        if (empty($row['OwnerID'])) {
+            echo "<p><a href='claim-listing.php?id=" . $listingId . "'>Claim this Listing</a></p>";
+        
+        }
+
         echo "</div>";
     } else {
         echo "Listing not found.";

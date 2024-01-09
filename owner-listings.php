@@ -36,6 +36,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true && isset($_
     } else {
         echo "No listings found for your account.";
     }
+    echo '<a href="create-listing.php">Create Listing</a>';
 
     $stmt->close();
 } else {
