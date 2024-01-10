@@ -1,5 +1,4 @@
 <?php
-// a list of all the listings in the database, filtered by status 'Accepted'
 // Database credentials
 $host = '127.0.0.1'; // or your host, could also be 'localhost'
 $dbUsername = 'root'; // or your db username
@@ -14,8 +13,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// SQL query to select all listings where status is 'Accepted'
-$sql = "SELECT ListingID, Title FROM listings WHERE status = 'Accepted'";
+// SQL query to select all listings
+$sql = "SELECT ListingID, Title FROM listings";
 $result = $conn->query($sql);
 
 // Check if there are results
