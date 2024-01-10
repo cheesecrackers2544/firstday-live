@@ -1,4 +1,5 @@
 <?php
+//Used for registered users to create a new listing. Upon doing so, sends an email to the admin for approval.
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
